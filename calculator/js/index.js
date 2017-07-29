@@ -31,7 +31,6 @@ $(document).ready(function(){
          }
         if(entry=="=")
            {
-              // alert(ans);
              var temp=(((eval(ans)).toFixed(14))*1).toString();
             $("#screen").html(temp);
             $("#calc_screen").html(temp);
@@ -52,8 +51,6 @@ $(document).ready(function(){
         else{
           $("#error").html("Digit limit reached.");
           $("#error").attr("hidden",false);
-          // $("#screen").html("0");
-          // $("#current_calc").html(0);
           error=1;
         }
     
@@ -71,16 +68,7 @@ $(document).ready(function(){
          ans+=entry;
                 $("#current_calc").html(ans);
       }
-        
-//         switch(entry){
-//           case "+":ans+=parseInt(current,10);
-//           // case "+":alert("")  
-//                }
-        // switch(entry){ 
-        //   case "mul":entry="\u00d7";ans+="*";break;
-        //   case "div":entry="\u00f7";ans+="/";break;
-        //   default: entry=entry;;  
-        //             }
+    else{
             try{
             current_ans=eval(ans);
               // alert(temp);
@@ -97,6 +85,7 @@ $(document).ready(function(){
         error=0;
         prev_entry=entry;
         $("#screen").html(current_ans);
+    }
   });
   
   $(".imp_key").click(function(){
